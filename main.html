@@ -15,7 +15,7 @@
     <div id="contents">
         <div id="index" class="slide focused" data-title="Cover">
             <div class="grid_container">
-                <div class="grid_full">
+                <div class="grid_cover">
                     <div style="display: flex; flex-wrap: wrap; 
                     border-left:#FFFFFF solid 0.5rem; 
                     border-right:#FFFFFF solid 0.5rem;">
@@ -49,18 +49,123 @@
                     <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
                     Profile
                 </div>
-                <div class="grid_left">사진</div>
-                <div class="grid_right">내용</div>
+                <div class="grid_left">
+                
+                    <div style="text-align: center;">
+                        <img src="imgs/profile.png" alt="" style="object-fit: contain; border-radius: 50%; width:80%; max-width: 280px;">
+                    </div>
+
+                    <div>
+                        <div style="text-align: center;">
+                            <span style="font-size: 2.5rem;">"말 잘하는 개발자"</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="section_title">인적사항</p>
+                        <hr class="hr1">
+
+                        <p>이름 : 김태수</p>
+                        <p>생일 : 1990.06.15</p>
+                        <p>연락처 : 000-0000-0000</p>
+                        <p>Blog : <a href="https://log.taedi.net">https://log.taedi.net</a></p>
+                        <p>Github : <a href="https://github.com/taedi90">https://github.com/taedi90</a></p>
+                        <p>Email : <a href="mailto:taedi90@gmail.com">taedi90@gmail.com</a></p>
+                    </div>
+
+                </div>
+                <div class="grid_right">
+
+                    <div>
+                        <p class="section_title">소개</p>
+                        <hr class="hr1">
+                        <p>안녕하세요, 주니어 개발자 김태수입니다! 비전공 직군에서 근무했지만, 
+                            항상 '더 나은 방법은 없을까?' 하는 생각을 가지고 업무와 관련된 프로그램을 스스로 만드는 활동을 해왔습니다. 
+                            그러다 문득 프로그래밍이 주는 즐거움에 대해 깨닫고, 1년간의 준비를 거쳐 백엔드 개발자에 도전하게 되었습니다.
+                            늘 <span class="highlight">새로운 기술</span>에 흥미를 느끼며, 
+                            영업 관련 직무에서 <span class="highlight">커뮤니케이션</span> 스킬 및 <span class="highlight">사용자의 시각</span>을 키워왔습니다.
+                    </div>
+
+                    <div>
+                        <p class="section_title">학력</p>
+                        <hr class="hr1">
+                        <ul>
+                            <li>[2010년 03월 ~ 2017년 02월] 영남대학교 (행정학과)</li>
+                            <li>[2006년 03월 ~ 2009년 02월] 대구고등학교 (자연계열)</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="section_title">해본 것</p>
+                        <hr class="hr1">
+                        <ul>
+                            <li>Spring Framework 를 활용한 MVC 웹 어플리케이션 제작 (Security, oAuth2.0)</li>
+                            <li>Slack, Notion, ERDCloud, Git 등 협업 & 버전 관리 툴 활용</li>
+                            <li>OCI(Oracle Cloud Infrastructure), Docker, Jenkins 를 활용한 CI 환경 구축</li>
+                            <li>Python GUI 어플리케이션 (PyQt5), VBA 오피스 자동화</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="section_title">현재 관심사</p>
+                        <hr class="hr1">
+                        <table>
+                            <tr>
+                                <td><img src="imgs/hobby/linux.png" alt="" style="height: 8rem;"></td>
+                                <td><img src="imgs/hobby/jenkins.png" alt="" style="height: 8rem;"></td>
+                                <td><img src="imgs/hobby/mac.png" alt="" style="height: 8rem;"></td>
+                            </tr>
+                            <tr>
+                                <td>Linux</td>
+                                <td>Jenkins</td>
+                                <td>Mac OS</td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
             </div>
         </div>
         <div id="portfolio1" class="slide" data-title="Portfolio1">
             <div class="grid_container">
                 <div class="grid_title">
                     <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
-                    Portfolio
+                    쇼핑몰 프로젝트 - Lyndon
                 </div>
-                <div class="grid_left">사진</div>
-                <div class="grid_right">내용</div>
+
+                <div class="grid_full">
+                    <div style="display: flex;">
+                        <img src="imgs/project/shop/thumb.png" alt="" style="object-fit: contain;">
+                    </div>
+
+                    <div>
+                        <ul>
+                            <li>Spring MVC 를 사용한 팀 프로젝트</li>
+                            <li>반응형 레이아웃</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="imgs/project/shop/detail/login.png" alt="" style="width: 350px;">
+                        <img src="imgs/project/shop/detail/manage.png" alt="" style="width: 350px;">
+                        <img src="imgs/project/shop/detail/cart.png" alt="" style="width: 350px;">
+                    </div>
+                    <div>
+                        <p class="section_title">맡은 역할</p>
+                        <hr class="hr1">
+                        <ul>
+                            <li>DB 설계 & Flow Chart</li>
+                            <li>로그인 (Spring Security, oAuth2, 이메일 인증), 메인 페이지, 장바구니, 관리자 페이지 등</li>
+                            <li>Vanilla JS를 활용한 Modal, Slider, Sidebar 제작</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        <a href="https://web.taedi.net/shop/" target="_blank" class="button">Go Site</a>
+                        <a href="https://github.com/taedi90/yiTeamProject" target="_blank" class="github">Github</a>
+                    </p>
+                </div>
+
             </div>
         </div>
         <div id="portfolio2" class="slide" data-title="Portfolio2">
