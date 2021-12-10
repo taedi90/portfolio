@@ -6,6 +6,38 @@ colors
 
  */
 
+@page {
+size: A4 landscape;
+margin: 0;
+}
+
+@media print {
+
+    body {
+        padding: 0;
+        margin: 15mm;
+    }
+
+    .slide {
+        width: 100% !important;
+        height: 210mm !important;
+        min-width: initial !important;
+        min-height: initial !important;
+        margin: 0;
+        padding: 0;
+
+        /* border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        background: initial; */
+        page-break-after: always;
+    }
+
+    .no_print {
+        display: none !important;
+    }
+}
 
 @media (min-width: 768.1px) {
     /* 가로 768px 초과시 1rem == 10px  */
@@ -51,6 +83,9 @@ body {
     font-size: 1.6rem;
 
     color: white;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 a {

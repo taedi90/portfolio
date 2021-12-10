@@ -13,6 +13,8 @@
 
     <!-- 슬라이드 -->
     <div id="contents">
+
+        <!-- 표지 -->
         <div id="index" class="slide focused" data-title="Cover">
             <div class="grid_container">
                 <div class="grid_cover">
@@ -43,6 +45,7 @@
             </div>
         </div>
 
+        <!-- 프로필 -->
         <div id="profile" class="slide" data-title="Profile">
             <div class="grid_container">
                 <div class="grid_title">
@@ -57,7 +60,7 @@
 
                     <div>
                         <div style="text-align: center;">
-                            <span style="font-size: 2.5rem;">"말 잘하는 개발자"</span>
+                            <span style="font-size: 2.5rem;">"말 잘하는 개발자입니다."</span>
                         </div>
                     </div>
 
@@ -127,11 +130,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- 포트폴리오1 -->
         <div id="portfolio1" class="slide" data-title="Portfolio1">
             <div class="grid_container">
                 <div class="grid_title">
                     <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
-                    쇼핑몰 프로젝트 - Lyndon
+                    Portfolio - Lyndon
                 </div>
 
                 <div class="grid_full">
@@ -168,14 +173,47 @@
 
             </div>
         </div>
+
+        <!-- 포트폴리오2 -->
         <div id="portfolio2" class="slide" data-title="Portfolio2">
             <div class="grid_container">
                 <div class="grid_title">
                     <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
-                    Portfolio
+                    Portfolio - 자유게시판
                 </div>
-                <div class="grid_left">사진</div>
-                <div class="grid_right">내용</div>
+
+                <div class="grid_full">
+                    <div style="display: flex;">
+                        <img src="imgs/project/board/thumb.png" alt="" style="object-fit: contain;">
+                    </div>
+                    <div>
+                            <p>JSP MVC 개인 프로젝트</p>
+                            <p>
+                                <span style="background-color: aquamarine;color:black">Single Page Application</span>
+                                <span style="background-color: aqua;color:black">반응형 레이아웃</span>
+                            </p>
+                    </div>
+                    <div>
+                        <img src="imgs/project/shop/detail/login.png" alt="" style="width: 350px;">
+                        <img src="imgs/project/shop/detail/manage.png" alt="" style="width: 350px;">
+                        <img src="imgs/project/shop/detail/cart.png" alt="" style="width: 350px;">
+                    </div>
+                    <div>
+                        <p class="section_title">맡은 역할</p>
+                        <hr class="hr1">
+                        <ul>
+                            <li>단방향 해시함수, Salt, Stretching 을 이용한 비밀번호 암호 처리</li>
+                            <li>파일 업로드 (Drag & Drop, 파일 리사이즈, 임의 폴더 생성 및 저장)</li>
+                            <li>대댓글 기능 (depth 에 상관없이 nested comment 를 작성할 수 있도록 구성)</li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        <a href="https://web.taedi.net/board/" target="_blank" class="button">Go Site</a>
+                        <a href="https://github.com/taedi90/personal_project_jsp" target="_blank" class="github">Github</a>
+                    </p>
+                </div>
+
             </div>
         </div>
         <div id="career" class="slide" data-title="Career">
@@ -202,12 +240,12 @@
 
 
     <!-- 네비게이션 바 -->
-    <div id="nav">
+    <div id="nav" class="no_print">
         <ul id="nav_container" class="hidden"></ul>
     </div>
 
     <!-- 최상위 버튼 -->
-    <div id="top_button_holder" class="hidden"><img src="imgs/top.svg" alt="상단으로 이동" style="width: 2.5rem; height: 2.5rem"></div>
+    <div id="top_button_holder" class="hidden no_print"><img src="imgs/top.svg" alt="상단으로 이동" style="width: 2.5rem; height: 2.5rem"></div>
 
 </body>
 
