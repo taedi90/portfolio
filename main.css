@@ -3,8 +3,11 @@ colors
 배경색 : #566A88
 강조글자 : #F4B183
 
-
  */
+
+div {
+    background-color: rgba(223, 220, 220, 0.199);
+}
 
 @page {
 size: A4 landscape;
@@ -15,23 +18,22 @@ margin: 0;
 
     body {
         padding: 0;
-        margin: 15mm;
+        margin: 0;
+    }
+
+    #contents {
+        padding: 0;
     }
 
     .slide {
-        width: 100% !important;
+        width: 297mm !important;
         height: 210mm !important;
         min-width: initial !important;
         min-height: initial !important;
         margin: 0;
         padding: 0;
 
-        /* border: initial;
-        border-radius: initial;
-        width: initial;
-        min-height: initial;
-        background: initial; */
-        page-break-after: always;
+        /* page-break-after: always; */
     }
 
     .no_print {
@@ -39,29 +41,43 @@ margin: 0;
     }
 }
 
-@media (min-width: 768.1px) {
+@media(min-width: 768.1px) {
     /* 가로 768px 초과시 1rem == 10px  */
-html { font-size: 62.5%; }
+html { 
+    font-size: 1vh; 
+}
 .grid_container {
-    padding: 5rem 10rem;
+    /* padding: 5rem 10rem; */
     grid-template-columns: 20rem 20rem repeat(auto-fit, minmax(200px, 1fr));
     /* grid-template-columns: repeat(5, 1fr); */
     grid-template-rows: 3rem 1fr;
     gap: 1rem;
 }
-#contents {
-    min-width: 1400px;
+
+#contents{
+    background-color: #e3e3e3;
+    padding: 0 calc((100vw - (100vh * 1.414))/2 ); 
+    min-width: calc(100vh * 1.39);
+    /* min-width: min-content; */
 }
 
 }
+
+/* 모바일 & 태블릿 */
 @media (max-width: 768px)  {
 /* 가로 768px 이하 1rem == 8.75px  */
 html { font-size: 54.6875%; }
+
+#contents {
+    width: 100vw;
+}
+
 .grid_container{
-    padding: 5rem;
+    width: 100%;
+    /* padding: 5rem; */
     grid-template-columns: repeat(2, 1fr);;
     grid-template-rows: 3rem 1fr;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .grid_left {
@@ -133,12 +149,18 @@ a.github {
     text-decoration: none; 
 }
 
-
 #contents > .slide {
     /* width: 100vw; */
     height: 100vh;
+    width: 100%;
     background-color: #566A88;
     
+}
+
+#contents img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* 그리드 컨테이너 */
@@ -179,9 +201,6 @@ a.github {
     grid-column-end: 3;
     grid-row-start: 2; 
     grid-row-end: 3;
-
-    /* background-color: rgba(209, 209, 209, 0.1);
-    box-shadow: 0 0 2px 1px rgb(63, 63, 63); */
 }
 
 .grid_container > .grid_right {

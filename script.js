@@ -41,6 +41,10 @@
 
     }, {passive:false});
 
+    window.addEventListener('resize', ()=>{
+        checkSlide();
+    });
+
 
     document.addEventListener('mouseup', (e)=>{
         checkSlide();
@@ -95,7 +99,7 @@
         slides[index].classList.add("focused");
         navLists[index].classList.add("focused");
 
-        const height = slides[0].clientHeight;
+        const height = window.innerHeight;
         window.scrollTo({top: index * height, behavior: 'smooth'});
         console.log(index * height);
 
@@ -118,7 +122,7 @@
 
         const curY = window.scrollY;
 
-        const height = slides[0].clientHeight;
+        const height = window.innerHeight;
 
         let min;
         let closeIdx = 0;
