@@ -10,232 +10,492 @@
 <body>
 
 
-
     <!-- 슬라이드 -->
     <div id="contents">
 
         <!-- 표지 -->
-        <div id="index" class="slide focused" data-title="Cover">
-            <div class="grid_container">
-                <div class="grid_cover">
-                    <div style="display: flex; flex-wrap: wrap; 
-                    border-left:#FFFFFF solid 0.5rem; 
-                    border-right:#FFFFFF solid 0.5rem;">
-                        <div style="width: 10%; border-top:#FFFFFF solid 0.5rem;"></div>
-                        <div style="width: 85%;"></div>
-                        <div style="width: 5%; border-top:#FFFFFF solid 0.5rem;"></div>
+        <div id="index" class="page" data-title="Cover">
+            <div class="flex">
 
-                        <div style="width: 100%; text-align: center; padding: 1rem 5rem">
-                            <span style="font-size: 4rem; color: #FFFFFF;">경력기술 및 포트폴리오</span>
-                            <br>
-                            <span style="font-size: 3rem; color: #F4B183;">Kim Tae Soo</span>
-                        </div>
-
-
-                        <div style="width: 5%; border-top:#FFFFFF solid 0.5rem;"></div>
-                        <div style="width: 85%;"></div>
-                        <div style="width: 10%; border-top:#FFFFFF solid 0.5rem;"></div>
-
+                <div class="cover_border center">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                
+                    <div style="text-align: center; padding: 1rem 5rem">
+                    
+                        <p style="font-size: 4rem; color: #FFFFFF;">경력기술 및 포트폴리오</p>
+                        <p style="font-size: 3rem; color: #F4B183;">Kim Tae Soo</p>
                     </div>
-
-
-
-
+                
                 </div>
+
             </div>
+
+
         </div>
 
         <!-- 프로필 -->
-        <div id="profile" class="slide" data-title="Profile">
-            <div class="grid_container">
-                <div class="grid_title">
+        <div id="profile" class="page" data-title="Profile">
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
                     Profile
                 </div>
-                <div class="grid_left">
-                
-                    <div style="text-align: center;">
-                        <img src="imgs/profile.png" alt="" style="object-fit: contain; border-radius: 50%; width:80%; max-width: 280px;">
+                <div class="item_auto horizontal_box">
+                    <div class="item_auto vertical_box padding_box jc_around">
+                            <div class="horizontal_box">
+                                <img src="imgs/profile.png" alt="" style="border-radius: 50%;max-width:30rem;max-height:30rem">
+                            </div>
+        
+                            <div>
+                                <div style="text-align: center;">
+                                    <span class="font_xl">"말 잘하는 개발자입니다."</span>
+                                </div>
+                            </div>
+        
+                            <div>
+                                <p class="section_title">인적사항</p>
+                                <hr class="hr1">
+        
+                                <p>이름 : 김태수</p>
+                                <p>생일 : 1990.06.15</p>
+                                <p>연락처 : 000-0000-0000</p>
+                                <p>Blog : <a href="https://log.taedi.net">https://log.taedi.net</a></p>
+                                <p>Github : <a href="https://github.com/taedi90">https://github.com/taedi90</a></p>
+                                <p>Email : <a href="mailto:taedi90@gmail.com">taedi90@gmail.com</a></p>
+                            </div>
                     </div>
 
-                    <div>
-                        <div style="text-align: center;">
-                            <span style="font-size: 2.5rem;">"말 잘하는 개발자입니다."</span>
+                    <div class="item_70 vertical_box desk_only padding_box  jc_around">
+                        <div>
+                            <p class="section_title">소개</p>
+                            <hr class="hr1">
+                            <p>안녕하세요, 주니어 개발자 김태수입니다! 비전공 직군에서 근무했지만, 
+                                항상 '더 나은 방법은 없을까?' 하는 생각을 가지고 업무와 관련된 프로그램을 스스로 만드는 활동을 해왔습니다. 
+                                그러다 문득 프로그래밍이 주는 즐거움에 대해 깨닫고, 1년간의 준비를 거쳐 백엔드 개발자에 도전하게 되었습니다.
+                                늘 <span class="highlight">새로운 기술</span> 에 흥미를 느끼며, 
+                                영업 관련 직무에서 <span class="highlight">커뮤니케이션</span> 스킬 및 <span class="highlight">사용자의 시각</span>을 키워왔습니다.
                         </div>
-                    </div>
-
-                    <div>
-                        <p class="section_title">인적사항</p>
-                        <hr class="hr1">
-
-                        <p>이름 : 김태수</p>
-                        <p>생일 : 1990.06.15</p>
-                        <p>연락처 : 000-0000-0000</p>
-                        <p>Blog : <a href="https://log.taedi.net">https://log.taedi.net</a></p>
-                        <p>Github : <a href="https://github.com/taedi90">https://github.com/taedi90</a></p>
-                        <p>Email : <a href="mailto:taedi90@gmail.com">taedi90@gmail.com</a></p>
+    
+                        <div>
+                            <p class="section_title">학력</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>[2010년 03월 ~ 2017년 02월] 영남대학교 (행정학과)</li>
+                                <li>[2006년 03월 ~ 2009년 02월] 대구고등학교 (자연계열)</li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">해본 것</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>Spring Framework 를 활용한 MVC 웹 어플리케이션 제작 (Security, oAuth2.0)</li>
+                                <li>Slack, Notion, ERDCloud, Git 등 협업 & 버전 관리 툴 활용</li>
+                                <li>OCI(Oracle Cloud Infrastructure), Docker, Jenkins 를 활용한 CI 환경 구축</li>
+                                <li>Python GUI 어플리케이션 (PyQt5), VBA 오피스 자동화</li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">현재 관심사</p>
+                            <hr class="hr1">
+                            <table>
+                                <tr>
+                                    <td><img src="imgs/hobby/linux.png" alt="" style="height: 8rem;"></td>
+                                    <td><img src="imgs/hobby/jenkins.png" alt="" style="height: 8rem;"></td>
+                                    <td><img src="imgs/hobby/mac.png" alt="" style="height: 8rem;"></td>
+                                </tr>
+                                <tr>
+                                    <td>Linux</td>
+                                    <td>Jenkins</td>
+                                    <td>Mac OS</td>
+                                </tr>
+                            </table>
+                        </div>
+    
                     </div>
 
                 </div>
-                <div class="grid_right">
 
-                    <div>
-                        <p class="section_title">소개</p>
-                        <hr class="hr1">
-                        <p>안녕하세요, 주니어 개발자 김태수입니다! 비전공 직군에서 근무했지만, 
-                            항상 '더 나은 방법은 없을까?' 하는 생각을 가지고 업무와 관련된 프로그램을 스스로 만드는 활동을 해왔습니다. 
-                            그러다 문득 프로그래밍이 주는 즐거움에 대해 깨닫고, 1년간의 준비를 거쳐 백엔드 개발자에 도전하게 되었습니다.
-                            늘 <span class="highlight">새로운 기술</span>에 흥미를 느끼며, 
-                            영업 관련 직무에서 <span class="highlight">커뮤니케이션</span> 스킬 및 <span class="highlight">사용자의 시각</span>을 키워왔습니다.
-                    </div>
-
-                    <div>
-                        <p class="section_title">학력</p>
-                        <hr class="hr1">
-                        <ul>
-                            <li>[2010년 03월 ~ 2017년 02월] 영남대학교 (행정학과)</li>
-                            <li>[2006년 03월 ~ 2009년 02월] 대구고등학교 (자연계열)</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p class="section_title">해본 것</p>
-                        <hr class="hr1">
-                        <ul>
-                            <li>Spring Framework 를 활용한 MVC 웹 어플리케이션 제작 (Security, oAuth2.0)</li>
-                            <li>Slack, Notion, ERDCloud, Git 등 협업 & 버전 관리 툴 활용</li>
-                            <li>OCI(Oracle Cloud Infrastructure), Docker, Jenkins 를 활용한 CI 환경 구축</li>
-                            <li>Python GUI 어플리케이션 (PyQt5), VBA 오피스 자동화</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p class="section_title">현재 관심사</p>
-                        <hr class="hr1">
-                        <table>
-                            <tr>
-                                <td><img src="imgs/hobby/linux.png" alt="" style="height: 8rem;"></td>
-                                <td><img src="imgs/hobby/jenkins.png" alt="" style="height: 8rem;"></td>
-                                <td><img src="imgs/hobby/mac.png" alt="" style="height: 8rem;"></td>
-                            </tr>
-                            <tr>
-                                <td>Linux</td>
-                                <td>Jenkins</td>
-                                <td>Mac OS</td>
-                            </tr>
-                        </table>
-                    </div>
-
-
-                </div>
             </div>
         </div>
 
         <!-- 포트폴리오1 -->
-        <div id="portfolio1" class="slide" data-title="Portfolio1">
-            <div class="grid_container">
-                <div class="grid_title">
+        <div id="portfolio1" class="page" data-title="Portfolio">
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
                     Portfolio - Lyndon
                 </div>
 
-                <div class="grid_full">
-                    <div style="display: flex;">
-                        <img src="imgs/project/shop/thumb.png" alt="" style="object-fit: contain;">
+                <div class="item_auto vertical_box padding_box">
+                    <div class="item_70 horizontal_box">
+                        <img class="center" src="imgs/project/shop/thumb.png" alt="">
                     </div>
+    
+                    <div class="item_10 center font_lg">
+                            Spring MVC 를 사용한 쇼핑몰 팀 프로젝트
+                    </div>
+    
+                    <div class="horizontal_box jc_center">
+                        <span class="hl_1">반응형</span>&nbsp;
+                        <span class="hl_2">Security</span>&nbsp;
+                        <span class="hl_3">oAuth</span>&nbsp;
+                        <span class="hl_4">Vanilla JS</span>
+                    </div>
+    
+                </div>
 
-                    <div>
-                        <ul>
-                            <li>Spring MVC 를 사용한 팀 프로젝트</li>
-                            <li>반응형 레이아웃</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="imgs/project/shop/detail/login.png" alt="" style="width: 350px;">
-                        <img src="imgs/project/shop/detail/manage.png" alt="" style="width: 350px;">
-                        <img src="imgs/project/shop/detail/cart.png" alt="" style="width: 350px;">
-                    </div>
-                    <div>
+                <div class="item_auto vertical_box padding_box">
+                    <!-- <div class="photo_list">
+                        <img src="imgs/project/shop/detail/login.png" alt="">
+                        <img src="imgs/project/shop/detail/manage.png" alt="">
+                        <img src="imgs/project/shop/detail/cart.png" alt="">
+                    </div> -->
+
+                    <div class="" style="margin: 0 auto;">
                         <p class="section_title">맡은 역할</p>
                         <hr class="hr1">
-                        <ul>
-                            <li>DB 설계 & Flow Chart</li>
-                            <li>로그인 (Spring Security, oAuth2, 이메일 인증), 메인 페이지, 장바구니, 관리자 페이지 등</li>
-                            <li>Vanilla JS를 활용한 Modal, Slider, Sidebar 제작</li>
+                        <ul class="font_lg">
+                            <li>일정 관리 및 업무 배분 (팀장 업무 수행)</li>
+                            <li>DB 설계 & Flow Chart 담당</li>
+                            <li>로그인 (Spring Security, oAuth2, 이메일 인증), 메인 페이지, 장바구니, 관리자 페이지 구현</li>
+                            <li>Vanilla JS를 활용한 Modal, slider, Sidebar 제작</li>
                         </ul>
                     </div>
 
-                    <p>
-                        <a href="https://web.taedi.net/shop/" target="_blank" class="button">Go Site</a>
-                        <a href="https://github.com/taedi90/yiTeamProject" target="_blank" class="github">Github</a>
-                    </p>
+                    <div class="" style="margin: 0 auto;">
+                        <a href="https://web.taedi.net/shop/" target="_blank" class="button">Go Website</a>
+                        <a href="https://github.com/taedi90/yiTeamProject" target="_blank" class="github">Github Repo</a>
+                    </div>
+
                 </div>
 
             </div>
         </div>
 
         <!-- 포트폴리오2 -->
-        <div id="portfolio2" class="slide" data-title="Portfolio2">
-            <div class="grid_container">
-                <div class="grid_title">
+        <div id="portfolio2" class="page" data-title="Portfolio">
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
                     Portfolio - 자유게시판
                 </div>
 
-                <div class="grid_full">
-                    <div style="display: flex;">
-                        <img src="imgs/project/board/thumb.png" alt="" style="object-fit: contain;">
+                <div class="item_auto vertical_box padding_box">
+                    <div class="item_70 horizontal_box">
+                        <img class="center" src="imgs/project/board/thumb.png" alt="">
                     </div>
-                    <div>
-                            <p>JSP MVC 개인 프로젝트</p>
-                            <p>
-                                <span style="background-color: aquamarine;color:black">Single Page Application</span>
-                                <span style="background-color: aqua;color:black">반응형 레이아웃</span>
-                            </p>
+    
+                    <div class="item_10 center font_lg">
+                        JSP MVC 개인 프로젝트
                     </div>
-                    <div>
-                        <img src="imgs/project/shop/detail/login.png" alt="" style="width: 350px;">
-                        <img src="imgs/project/shop/detail/manage.png" alt="" style="width: 350px;">
-                        <img src="imgs/project/shop/detail/cart.png" alt="" style="width: 350px;">
+    
+                    <div class="horizontal_box jc_center">
+                        <span class="hl_1">Single Page Application</span>&nbsp;
+                        <span class="hl_2">반응형</span>
                     </div>
-                    <div>
-                        <p class="section_title">맡은 역할</p>
+    
+                </div>
+
+                <div class="item_auto vertical_box padding_box">
+                    <!-- <div class="photo_list">
+                        <img src="imgs/project/board/detail/login.png" alt="">
+                        <img src="imgs/project/board/detail/thumb.gif" alt="">
+                        <img src="imgs/project/board/detail/comment.png" alt="">
+                    </div> -->
+
+                    <div class="" style="margin: 0 auto;">
+                        <p class="section_title">주요 사항</p>
                         <hr class="hr1">
-                        <ul>
+                        <ul class="font_lg">
                             <li>단방향 해시함수, Salt, Stretching 을 이용한 비밀번호 암호 처리</li>
                             <li>파일 업로드 (Drag & Drop, 파일 리사이즈, 임의 폴더 생성 및 저장)</li>
                             <li>대댓글 기능 (depth 에 상관없이 nested comment 를 작성할 수 있도록 구성)</li>
                         </ul>
                     </div>
 
-                    <p>
-                        <a href="https://web.taedi.net/board/" target="_blank" class="button">Go Site</a>
-                        <a href="https://github.com/taedi90/personal_project_jsp" target="_blank" class="github">Github</a>
-                    </p>
+                    <div class="" style="margin: 0 auto;">
+                        <a href="https://web.taedi.net/board/" target="_blank" class="button">Go Website</a>
+                        <a href="https://github.com/taedi90/personal_project_jsp" target="_blank" class="github">Github Repo</a>
+                    </div>
+
                 </div>
 
             </div>
         </div>
-        <div id="career" class="slide" data-title="Career">
-            <div class="grid_container">
-                <div class="grid_title">
-                    <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
+
+        <!-- 스킬 -->
+        <div id="skills" class="page" data-title="Skills" >
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
+                    Skills - Python
+                </div>
+                <div class="item_auto horizontal_box">
+                    <div class="item_auto vertical_box padding_box jc_around">
+                            <div class="horizontal_box">
+                                <img src="imgs/skills/python.png" alt="">
+                            </div>
+                    </div>
+
+                    <div class="item_40 vertical_box desk_only padding_box jc_center">
+                        <div>
+                            <p class="section_title">사례 - 문자 발송 프로그램</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>SMS 사이트 사용 중 발신번호를 잘못 기입하여 발생하는 실수를 방지하기 위하여 제작 </li>
+                                <li>개인별 프리셋, Excel 데이터 활용 등 편의 기능 추가</li>
+                                <li>사이트 제공 API 활용</li>
+                            </ul>
+
+                        </div>
+    
+                        <div>
+                            <p class="section_title">활용 능력</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>PyQt5 GUI</li>
+                                <li>웹 크롤링 일부</li>
+                                <li>DB 활용 일부</li>
+                                <li>API 활용 일부</li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">적용 사례</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>사업자 번호 폐업 여부 조회</li>
+                                <li>후원방문판매업 등록 현황 조회</li>
+                                <li>마감 매출 조회 등</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- 스킬2 -->
+        <div id="skills" class="page" data-title="Skills" >
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
+                    Skills - AHK
+                </div>
+                <div class="item_auto horizontal_box">
+                    <div class="item_auto vertical_box padding_box jc_around">
+                            <div class="horizontal_box">
+                                <img src="imgs/skills/ahk.png" alt="">
+                            </div>
+                    </div>
+
+                    <div class="item_40 vertical_box desk_only padding_box jc_center">
+                        <div>
+                            <p class="section_title">사례 - ERP 내 파일 업로드 프로그램</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>사내 전산에 다수의 대리점 계약자 정보를
+                                    업로드 하는 작업을 자동화
+                                  </li>
+                                <li>수기작업으로 2시간 소요되는 업무를 
+                                    20분 내외로 단축
+                                 </li>
+                            </ul>
+                              
+                        </div>
+    
+                        <div>
+                            <p class="section_title">활용 능력</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>반복적인 키보드, 마우스 입력 자동화
+                                </li>
+                                <li>윈도우 및 프로그램 제어
+                                </li>
+                                <li>웹 크롤링
+                                </li>
+                                <li>Excel 데이터 활용</li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">적용 사례</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>ERP 대리점 정보 입력 자동화
+                                </li>
+                                <li>웹페이지 파일 업로드 등</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- 스킬2 -->
+        <div id="skills" class="page" data-title="Skills" >
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
+                    Skills - Office
+                </div>
+                <div class="item_auto horizontal_box">
+                    <div class="item_auto vertical_box padding_box jc_around">
+                            <div class="horizontal_box">
+
+                                <img src="imgs/skills/ppt.png" alt="">
+                            </div>
+                            <img src="imgs/skills/office.png" alt="">
+
+                    </div>
+
+                    <div class="item_70 vertical_box desk_only padding_box jc_center">
+                        <div>
+                            <p class="section_title">사례1 - 대리점주 교육용 PPT</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>간결함과 가독성에 중점을 두어
+                                    대상자가 정보를 이해하기 쉽도록
+                                    구성
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="section_title">PPT · · · 중</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>간단한 템플릿 제작</li>
+                                <li>음성 & 비디오 클립 & 
+                                    애니메이션을 활용한 
+                                    동영상 파일 제작 
+                                  </li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">사례2 - 대시보드형 매출 증감 보고</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>일별 데이터를 쿼리를 활용하여 
+                                    자동 갱신하며, 매출일이나 품목 등을
+                                    지정하여 세부 데이터를 파악할 수
+                                    있도록 구성
+                                  </li>
+                            </ul>
+                        </div>
+    
+                        <div>
+                            <p class="section_title">EXCEL & VBA · · · 중상</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>기본 함수 활용
+                                </li>
+                                <li>파워 쿼리 및 피벗을 활용한 
+                                    대용량 데이터 관리 및 분석
+                                </li>
+                                <li>VBA 활용 폼 제작, 
+                                    반복 및 논리 업무 처리                                  
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- 경력사항 -->
+        <div id="career" class="page" data-title="Career" >
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid rgb(255, 251, 8); width:3rem"></div>
                     Career
                 </div>
-                <div class="grid_left">사진</div>
-                <div class="grid_right">내용</div>
-            </div>
-        </div>
-        <div id="skills"  class="slide" data-title="Skills">
-            <div class="grid_container">
-                <div class="grid_title">
-                    <div style="border-top: 0.5rem solid #fff; width:3rem"></div>
-                    skills
+
+                <div class="item_50 horizontal_box">
+                    <div class="item_30 center padding_box">
+                        <p class="font_2xl" style="border:0.5rem solid white;border-radius: 10rem; text-align: center;">리만코리아</p> 
+                        <p>2019.09 ~ 2020.12</p>
+                        <p>대리점관리팀 / 대리</p>
+                        <ul>
+                            <li>대리점 계약 관리</li>
+                            <li>매출 분석</li>
+                            <li>관공서 미팅</li>
+                        </ul>
+                        
+                    </div>
+                    <div class="item_auto">
+                        <div class="horizontal_box">
+                            <img src="imgs/career/career.png" alt="" style="max-width: 30%;">
+                            <img src="imgs/career/career2.png" alt="" style="max-width: 30%;">
+                        </div>
+
+                        <div>
+                            <p class="section_title">사내 ERP 도입 프로젝트</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>정책 변화에 따른 신규 ERP 도입 프로젝트에
+                                    부서별 담당자와 전산팀으로 구성된 팀으로 활동                                  
+                                </li>
+                                <li>부서 내 진행 중인 업무에 대한 전산 필요 사항 및 
+                                    관련 데이터 제공 담당                                  
+                                </li>
+                                <li>개발 담당자와 신속 정확한 의사소통을 통하여
+                                    기존 수기 업무의 약 80% 전산화 완료                                                                   
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="grid_left">사진</div>
-                <div class="grid_right">내용</div>
+                <div class="item_auto horizontal_box">
+                    <div class="item_30 center padding_box">
+                        <p class="font_2xl" style="border:0.5rem solid white;border-radius: 10rem; text-align: center;">롯데아사히주류</p>   
+                        <p>2017.01 ~ 2019.03</p>
+                        <p>Hyper지점 / 대리</p>
+                        <ul>
+                            <li>영업 지원</li>
+                            <li>매출 분석</li>
+                            <li>채널 영업</li>
+                        </ul>
+
+                    </div>
+                    <div class="item_auto">
+                        <div>
+                            <p class="section_title">EXCEL & VBA · · · 중상</p>
+                            <hr class="hr1">
+                            <ul>
+                                <li>기본 함수 활용
+                                </li>
+                                <li>파워 쿼리 및 피벗을 활용한 
+                                    대용량 데이터 관리 및 분석
+                                </li>
+                                <li>VBA 활용 폼 제작, 
+                                    반복 및 논리 업무 처리                                  
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
+
         </div>
+
     </div>
 
 
@@ -245,7 +505,7 @@
     </div>
 
     <!-- 최상위 버튼 -->
-    <div id="top_button_holder" class="hidden no_print"><img src="imgs/top.svg" alt="상단으로 이동" style="width: 2.5rem; height: 2.5rem"></div>
+    <div id="top_button_holder" class="hidden no_print"><img src="imgs/top.svg" alt="상단으로 이동"></div>
 
 </body>
 

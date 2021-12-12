@@ -1,15 +1,15 @@
 'use strict';
 
 (function(){
-    const slides = document.querySelectorAll(".slide"); //전체 슬라이드
+    const pages = document.querySelectorAll(".page"); //전체 페이지
     const navContainer = document.querySelector("#nav_container");
     const topButton = document.querySelector("#top_button_holder");
-    const slideCount = slides.length; //슬라이드 수
-    let curIndex = 0; //현재 슬라이드 번호
+    const slideCount = pages.length; //페이지 수
+    let curIndex = 0; //현재 페이지 번호
 
     //네비 리스트 생성하기
     for(let i = 0; i < slideCount; ++i) {
-        let title = slides[i].dataset.title;
+        let title = pages[i].dataset.title;
         if(title === undefined || title === ""){
             title = "slide" + (i + 1);
         }
@@ -92,11 +92,11 @@
             return;
         }
 
-        slides[curIndex].classList.remove("focused");
+        pages[curIndex].classList.remove("focused");
         navLists[curIndex].classList.remove("focused");
 
         curIndex = index;
-        slides[index].classList.add("focused");
+        pages[index].classList.add("focused");
         navLists[index].classList.add("focused");
 
         const height = window.innerHeight;
