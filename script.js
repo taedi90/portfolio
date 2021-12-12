@@ -70,27 +70,30 @@
 
     //방향키 반응
     document.addEventListener('keydown', (e) => {
-        e.preventDefault();
         console.log(e);
 
         const key = e.keyCode;
 
         //위로 || 왼쪽
         if(key === 38 || key === 37){
+            e.preventDefault();
             console.log("위로");
             prevSlide();
         }
         //아래로 || 오른쪽
         if(key === 40 || key === 39){
+            e.preventDefault();
             console.log("아래로");
             nextSlide();
         }
         //엔터
         if(key === 13){
+            e.preventDefault();
             console.log("엔터");
         }
         //백스페이스 || ESC
         if(key === 8 || key === 27){
+            e.preventDefault();
             console.log("엔터");
             changeSlide(0);
         }
