@@ -17,16 +17,12 @@
             title = "slide" + (i + 1);
         }
 
-
-        
-
-
         const list = document.createElement("li");
         list.textContent = title;
 
         list.addEventListener('click', (e)=>{
             e.preventDefault();
-            changeSlide(i);
+            changePage(i);
         }, {passive:false});
 
         //동일 타이틀이 있으면 숨김처리
@@ -47,25 +43,26 @@
         //console.log(e.deltaY); // 음수는 위로 양수는 아래로
 
         if(e.deltaY > 0) {//내려가기
-            nextSlide();
+            nextPage();
         } else {//위로가기
-            prevSlide();
+            prevPage();
         }
 
     }, {passive:false});
 
+    //화면 리사이즈 할 때 마다 페이지 위치 조정
     window.addEventListener('resize', ()=>{
-        checkSlide();
+        checkPage();
     });
 
-
+    //마우스 클릭 후 페이지 위치 조정(스크롤)
     document.addEventListener('mouseup', (e)=>{
-        checkSlide();
+        checkPage();
     });
 
     //최상위 이동 버튼
     topButton.addEventListener('click', ()=>{
-        changeSlide(0);
+        changePage(0);
     });
 
     //방향키 반응
@@ -78,24 +75,25 @@
         if(key === 38 || key === 37){
             e.preventDefault();
             //console.log("위로");
-            prevSlide();
+            prevPage();
         }
         //아래로 || 오른쪽
         if(key === 40 || key === 39){
             e.preventDefault();
             //console.log("아래로");
-            nextSlide();
+            nextPage();
         }
         //엔터
         if(key === 13){
             e.preventDefault();
             //console.log("엔터");
+            nextPage();
         }
         //백스페이스 || ESC
         if(key === 8 || key === 27){
             e.preventDefault();
-            //console.log("엔터");
-            changeSlide(0);
+            //console.log("백스페이스&ESC");
+            changePage(0);
         }
 
     }, {passive:false})
@@ -103,7 +101,7 @@
 
 
     //페이지 이동하기
-    function changeSlide(index){
+    function changePage(index){
         if(index < 0 || index >> slideCount){
             return;
         }
@@ -122,19 +120,22 @@
         toggleNav();
     }
 
-    function prevSlide(){
+    //이전 페이지로 이동
+    function prevPage(){
         if (curIndex > 0) {
-            changeSlide(curIndex - 1);
+            changePage(curIndex - 1);
         } 
     }
 
-    function nextSlide(){
+    //다음 페이지로 이동
+    function nextPage(){
         if (curIndex + 1 < slideCount) {
-            changeSlide(curIndex + 1);
+            changePage(curIndex + 1);
         } 
     }
 
-    function checkSlide(){
+    //포커싱할 페이지 확인
+    function checkPage(){
 
         const curY = window.scrollY; //현재 사용자 스크롤 Y좌표
 
@@ -151,11 +152,9 @@
             }
         }
 
-        changeSlide(closeIdx);
+        changePage(closeIdx);
 
     }
-
-
 
     //2페이지 이후부터 네비게이션 보여주기
     function toggleNav(){
