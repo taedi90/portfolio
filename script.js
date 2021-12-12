@@ -44,7 +44,7 @@
     document.addEventListener('wheel', (e)=>{
         e.preventDefault();
 
-        console.log(e.deltaY); // 음수는 위로 양수는 아래로
+        //console.log(e.deltaY); // 음수는 위로 양수는 아래로
 
         if(e.deltaY > 0) {//내려가기
             nextSlide();
@@ -70,31 +70,31 @@
 
     //방향키 반응
     document.addEventListener('keydown', (e) => {
-        console.log(e);
+        //console.log(e);
 
         const key = e.keyCode;
 
         //위로 || 왼쪽
         if(key === 38 || key === 37){
             e.preventDefault();
-            console.log("위로");
+            //console.log("위로");
             prevSlide();
         }
         //아래로 || 오른쪽
         if(key === 40 || key === 39){
             e.preventDefault();
-            console.log("아래로");
+            //console.log("아래로");
             nextSlide();
         }
         //엔터
         if(key === 13){
             e.preventDefault();
-            console.log("엔터");
+            //console.log("엔터");
         }
         //백스페이스 || ESC
         if(key === 8 || key === 27){
             e.preventDefault();
-            console.log("엔터");
+            //console.log("엔터");
             changeSlide(0);
         }
 
@@ -117,7 +117,7 @@
 
         const height = window.innerHeight;
         window.scrollTo({top: index * height, behavior: 'smooth'});
-        console.log(index * height);
+        //console.log(index * height);
 
         toggleNav();
     }
