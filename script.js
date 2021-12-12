@@ -8,12 +8,19 @@
     let curIndex = 0; //현재 페이지 번호
 
     //네비 리스트 생성하기
+    let navArr = new Array();
     for(let i = 0; i < slideCount; ++i) {
         let title = pages[i].dataset.title;
+
+        //이름이 설정되지 않은 슬라이드는 슬라이드 번호로 표시
         if(title === undefined || title === ""){
             title = "slide" + (i + 1);
         }
+
+
         
+
+
         const list = document.createElement("li");
         list.textContent = title;
 
@@ -21,6 +28,12 @@
             e.preventDefault();
             changeSlide(i);
         }, {passive:false});
+
+        //동일 타이틀이 있으면 숨김처리
+        if(navArr.indexOf(title) >= 0){
+            list.classList.add("hidden");
+        }
+        navArr.push(title);
 
         navContainer.appendChild(list);
     }
@@ -120,9 +133,9 @@
 
     function checkSlide(){
 
-        const curY = window.scrollY;
+        const curY = window.scrollY; //현재 사용자 스크롤 Y좌표
 
-        const height = window.innerHeight;
+        const height = pages[0].clientHeight; //페이지 1장당 크기
 
         let min;
         let closeIdx = 0;
