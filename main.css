@@ -79,6 +79,10 @@ body {
     width: 100vw;
 }
 
+#contents img {
+    max-width: auto !important;
+}
+
 
 /* 모바일에서 사라질 아이템 */
 .desk_only {display: none !important;}
@@ -296,4 +300,8 @@ th,td img {
 /* 박스 섀도우 */
 .shadow{
     box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.16), 0 0.5rem 0.8rem rgba(0,0,0,0.23);
+}
+
+.badge{
+    margin: 0.3rem;
 }
