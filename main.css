@@ -132,6 +132,7 @@ a.button {
     padding: 0.8rem 0.8rem;
     border-radius: 0.8rem;
     text-decoration: none; 
+    border: 0.1rem solid black;
 }
 
 a.github {
@@ -140,6 +141,7 @@ a.github {
     padding: 0.8rem 0.8rem;
     border-radius: 0.8rem;
     text-decoration: none; 
+    border: 0.1rem solid black;
 }
 
 #contents > .page {
@@ -298,9 +300,9 @@ th,td img {
 } */
 
 /* 박스 섀도우 */
-.shadow{
+/* .shadow{
     box-shadow:0 0.5rem 0.8rem rgba(0,0,0,0.16), 0 0.5rem 0.8rem rgba(0,0,0,0.23);
-}
+} */
 
 .badge{
     margin: 0.3rem;
