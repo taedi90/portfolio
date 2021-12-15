@@ -55,7 +55,7 @@
         
                             <div class="desk_only">
                                 <div style="text-align: center;">
-                                    <span style="font-size: 2.7rem;">"말 잘하는 개발자입니다."</span>
+                                    <span style="font-size: 2.7rem;">"컴퓨터와 소통, <br>사람과 소통"</span>
                                 </div>
                             </div>
         
@@ -97,7 +97,7 @@
                             <ul>
                                 <li>Spring Framework 를 활용한 MVC 웹 어플리케이션 제작 (Security, oAuth2.0)</li>
                                 <li>Slack, Notion, ERDCloud, Git 등 협업 & 버전 관리 툴 활용</li>
-                                <li>OCI(Oracle Cloud Infrastructure), Docker, Jenkins 를 활용한 CI 환경 구축</li>
+                                <li>OCI(Oracle Cloud Infrastructure), Docker, Jenkins 를 활용한 CI, CD 환경 구축</li>
                                 <li>Python GUI 어플리케이션 (PyQt5), VBA 오피스 자동화</li>
                             </ul>
                         </div>
@@ -228,6 +228,49 @@
             </div>
         </div>
 
+        <div id="portfolio1" class="page" data-title="Portfolio">
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid #D92938; width:3rem"></div>
+                    Portfolio
+                </div>
+                <div class="item_5 section_title">
+                    쇼핑몰 프로젝트 - Lyndon
+                </div>
+                <div class="item_auto vertical_box padding_box jc_center">
+                    <p class="section_title">문제 및 해결 시도</p>
+                    <hr class="hr1">
+                    <ul class="font_lg">
+
+                        <!-- <li>
+                            Security<br>
+
+                        </li> -->
+                        <li>
+                            SMTP SSLHandshakeException 이슈 <br>
+                            테스트 환경에서 정상적으로 작동하던 메일 발송 서비스가 서버 환경에서 SSLHandshakeException이 발생하는 이슈가 있었습니다.
+                            HTTPS가 적용된 서버였기에 tomcat server 설정에서 ssl인증서를 등록하는 등의 시도를 했으나 문제는 해결되지 않았고,
+                            TLS1.2를 지원하는 mail 라이브러리 1.6.X 로 변경하여 문제를 해결할 수 있었습니다.<br><br><br>
+                        </li>
+                        <li>
+                            무분별한 Enum 활용<br>
+                            열거형 클래스를 활용해 뷰로 결과를 전송하면 서비스 클래스가 간결해지고 반환형태도 명료해진다는 생각에 컨트롤러의 많은 부분에 적용했습니다.
+                            경우에 따라 dto나 map객체도 같이 반환하는 상황이 생겨 enum에 속성을 추가하였고 뒤늦게 static final 을 지닌다는 것을 알게 되었습니다. 
+                            통신 이후에도 enum은 초기화 되지 않아 다른 사용자에게 정보가 노출될 수 있다는 사실을 깨달았고 HandlerInterceptorAdapter를 재정의하여 화면 처리 후 enum을 초기화 하는 것으로 문제를 해결할 수 있었습니다.<br><br><br>
+                        </li>
+                        <li>Exception Handling<br>
+                            사이트 보안 관점에서 tomcat 기본 오류 페이지가 아닌 별도 에러 페이지를 구축시도했으나, 일부 오류에 대해서는 여전히 tomcat 오류 페이지가 발생하는 이슈가 있었습니다.
+                            최초 계획은 1개의 핸들러에서 모든 예외를 처리하는 것이었으나 해당 방법은 찾지 못하였고, 서버의 web.xml 파일, 프로젝트 내부의 
+                            HandlerExceptionResolver, @ControllerAdvice & @ExceptionHandler 어노테이션, security의 authenticationEntryPoint, accessDeniedHandler, AuthenticationFailureHandler
+                            를 정의하여 예외 처리를 할 수 있었습니다. 
+                            <br><br><br>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
         <!-- 포트폴리오2 -->
         <div id="portfolio2" class="page" data-title="Portfolio">
             <div class="vertical_box">
@@ -270,7 +313,7 @@
                         <ul class="font_lg">
                             <li>단방향 해시 함수, Salt, Stretching 을 이용한 비밀번호 암호 처리</li>
                             <li>파일 업로드 (Drag & Drop, 파일 리사이즈, 임의 폴더 생성 및 저장)</li>
-                            <li>대댓글 기능 (depth 에 상관없이 nested comment 를 작성할 수 있도록 구성)</li>
+                            <li>계층형 댓글 기능 (depth 에 상관없이 nested comment 를 작성할 수 있도록 구성)</li>
                         </ul>
                     </div>
 
@@ -284,12 +327,55 @@
             </div>
         </div>
 
+        <div id="portfolio1" class="page" data-title="Portfolio">
+            <div class="vertical_box">
+                <div class="item_5 font_xl">
+                    <div style="border-top: 0.5rem solid #D92938; width:3rem"></div>
+                    Portfolio
+                </div>
+                <div class="item_5 section_title">
+                    게시판 프로젝트
+                </div>
+                <div class="item_auto vertical_box padding_box jc_center">
+                    <p class="section_title">문제 및 해결 시도</p>
+                    <hr class="hr1">
+                    <ul class="font_lg">
+                        <li>계층형 댓글 구현<br>
+                            깊이에 제한이 없는 계층형 댓글을 구현하기 위한 자료를 찾아봤을 때, 재귀를 활용한 방식을 많이 접했으나 사용하던 MySQL 5.7 버전 에서는 재귀함수가 따로 존재하지 않음을 알게 되었습니다.
+                            그래서 개인적으로 방법을 연구하였고 각 게시물의 댓글 수가 많지 않다는 판단에 
+                            게시물에 해당하는 모든 댓글을 '계층 오름차순', '번호 내림차순'으로 받아와 
+                            자료 삽입에 유리한 LinkedList 리스트를 이용해 순서대로 읽으며 사이에 끼워넣는 방식으로
+                            기능을 구현할 수 있었습니다.
+                            <br><br><br>
+                        </li>
+                        <li>
+                            파일 업로드 경로 문제<br>
+                            프로젝트 내부 경로에 파일을 업로드 하게되면 재배포시에 자료를 잃을 수 있는 문제가 있었고, 외부 경로는 서버, 개발환경 간 OS 불일치로 경로를 통일시킬 수 없는 문제가 있었습니다.
+                            파일 업로드시에 프로젝트가 구동된 환경을 파악하고 그에따라 업로드 경로를 다르게 설정했고, 각각의 tomcat 설정에 업로드 폴더를 프로젝트 내부 폴더와 마운트하여 해결할 수 있었습니다.
+                            이후 진행한 쇼핑몰 프로젝트에서 이 부분을 좀더 보강하여 적용할 수 있었습니다.
+                            <br><br><br>
+                        </li>
+                        <li>
+                            Properties 정보 노출 이슈<br>
+                            프로젝트 소스를 지속적으로 Github에 남기다 보니 DB 로그인 정보가 담겨있는 Properties가 신경이 쓰였습니다.
+                            <br>
+                            이를 위한 방안으로는 .gitignore를 설정하는 방법과 환경변수로 등록하여 활용하는 방법, 그리고 jasypt 라이브러리를 활용한 암/복호화 방법이 있음을 알게 되었고
+                            그중 생소한 개념인 jasypt를 적용하여 보았습니다. stretching 값을 높게주면 알고리즘이 노출되어도 보안에 효율적이라는 내용을 알게 되었지만, 그만큼 DB 접속시에
+                            딜레이가 심해지는 것도 몸소 느꼈습니다.
+                            <br><br><br>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
         <!-- 스킬1 -->
-        <div id="skills" class="page" data-title="Skills" >
+        <div class="page" data-title="Others" >
             <div class="vertical_box">
                 <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid #590209; width:3rem"></div>
-                    Skills
+                    Others
                 </div>
                 <div class="item_5 section_title">
                     Python
@@ -343,11 +429,11 @@
         </div>
 
         <!-- 스킬2 -->
-        <div id="skills" class="page" data-title="Skills" >
+        <div id="skills" class="page" data-title="Others" >
             <div class="vertical_box">
                 <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid #590209; width:3rem"></div>
-                    Skills
+                    Others
                 </div>
                 <div class="item_5 section_title">
                     Autohotkey
@@ -399,11 +485,11 @@
         </div>
 
         <!-- 스킬3 -->
-        <div id="skills" class="page" data-title="Skills" >
+        <div id="skills" class="page" data-title="Others" >
             <div class="vertical_box">
                 <div class="item_5 font_xl">
                     <div style="border-top: 0.5rem solid #590209; width:3rem"></div>
-                    Skills
+                    Others
                 </div>
                 <div class="item_5 section_title">
                     Visual Basic for Application
@@ -429,14 +515,13 @@
                             <p class="section_title">활용 능력</p>
                             <hr class="hr1">
                             <ul>
-                                <li>기본 함수 활용
-                                </li>
-                                <li>파워 쿼리 및 피벗을 활용한 
-                                    대용량 데이터 관리 및 분석
-                                </li>
                                 <li>VBA 활용 폼 제작, 
                                     반복 및 논리 업무 처리                                  
                                 </li>
+                                <li>파워 쿼리 및 피벗을 활용한 
+                                    데이터 관리 및 분석
+                                </li>
+
                             </ul>
                         </div>
                     </div>
