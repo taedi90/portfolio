@@ -65,15 +65,20 @@ html {
 /* 모바일 & 태블릿 */
 @media (max-width: 768px)  {
 /* 가로 768px 이하 1rem == 8.75px  */
-html { font-size: 54.6875%; }
+html { font-size: 35%; }
 
 body {
     min-width: 370px;
 }
 
+.mobile_vertical {
+    flex-direction: column !important;
+}
+
 #contents {
     width: 100vw;
 }
+
 
 /* 모바일에서 사라질 아이템 */
 .desk_only {display: none !important;}
