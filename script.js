@@ -36,69 +36,6 @@
 
     const navLists = navContainer.childNodes;
 
-    //휠 동작에 따라 페이지 전환
-    document.addEventListener('wheel', (e)=>{
-        e.preventDefault();
-
-        //console.log(e.deltaY); // 음수는 위로 양수는 아래로
-
-        if(e.deltaY > 0) {//내려가기
-            nextPage();
-        } else {//위로가기
-            prevPage();
-        }
-
-    }, {passive:false});
-
-    //화면 리사이즈 할 때 마다 페이지 위치 조정
-    window.addEventListener('resize', ()=>{
-        checkPage();
-    });
-
-    //마우스 클릭 후 페이지 위치 조정(스크롤)
-    document.addEventListener('mouseup', (e)=>{
-        checkPage();
-    });
-
-    //최상위 이동 버튼
-    topButton.addEventListener('click', ()=>{
-        changePage(0);
-    });
-
-    //방향키 반응
-    document.addEventListener('keydown', (e) => {
-        //console.log(e);
-
-        const key = e.keyCode;
-
-        //위로 || 왼쪽
-        if(key === 38 || key === 37){
-            e.preventDefault();
-            //console.log("위로");
-            prevPage();
-        }
-        //아래로 || 오른쪽
-        if(key === 40 || key === 39){
-            e.preventDefault();
-            //console.log("아래로");
-            nextPage();
-        }
-        //엔터
-        if(key === 13){
-            e.preventDefault();
-            //console.log("엔터");
-            nextPage();
-        }
-        //백스페이스 || ESC
-        if(key === 8 || key === 27){
-            e.preventDefault();
-            //console.log("백스페이스&ESC");
-            changePage(0);
-        }
-
-    }, {passive:false})
-
-
 
     //페이지 이동하기
     function changePage(index){
@@ -166,5 +103,77 @@
             topButton.classList.remove('hidden');
         }
     }
+
+    //모바일 확인
+    function mobile(){
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    //최상위 이동 버튼
+    topButton.addEventListener('click', ()=>{
+        changePage(0);
+    });
+
+    //마우스 클릭 후 페이지 위치 조정(스크롤)
+    document.addEventListener('mouseup', (e)=>{
+        checkPage();
+    });
+
+    //모바일인 경우 
+    if(mobile()){
+        return;
+    }
+
+    //휠 동작에 따라 페이지 전환
+    document.addEventListener('wheel', (e)=>{
+        e.preventDefault();
+
+        //console.log(e.deltaY); // 음수는 위로 양수는 아래로
+
+        if(e.deltaY > 0) {//내려가기
+            nextPage();
+        } else {//위로가기
+            prevPage();
+        }
+
+    }, {passive:false});
+
+    //화면 리사이즈 할 때 마다 페이지 위치 조정
+    window.addEventListener('resize', ()=>{
+        checkPage();
+    });
+
+    //방향키 반응
+    document.addEventListener('keydown', (e) => {
+        //console.log(e);
+
+        const key = e.keyCode;
+
+        //위로 || 왼쪽
+        if(key === 38 || key === 37){
+            e.preventDefault();
+            //console.log("위로");
+            prevPage();
+        }
+        //아래로 || 오른쪽
+        if(key === 40 || key === 39){
+            e.preventDefault();
+            //console.log("아래로");
+            nextPage();
+        }
+        //엔터
+        if(key === 13){
+            e.preventDefault();
+            //console.log("엔터");
+            nextPage();
+        }
+        //백스페이스 || ESC
+        if(key === 8 || key === 27){
+            e.preventDefault();
+            //console.log("백스페이스&ESC");
+            changePage(0);
+        }
+
+    }, {passive:false})
 
 })();

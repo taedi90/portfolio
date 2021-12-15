@@ -152,7 +152,7 @@ a.github {
 
 #contents img {
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     max-width: 100%;
 }
 
